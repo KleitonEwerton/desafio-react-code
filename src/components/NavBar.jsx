@@ -9,13 +9,14 @@ import "./styles/nav-bar.css";
 //-------------------------------------------------------//
 
 class NavBar extends Component {
-  state = {};
+ 
   render() {
     return (
       <div className="nav-bar">
         <Link to="/">Home</Link>
-        <Link to="/about">about</Link>
-        <Link to="/contact">contact</Link>
+        <Link to="/about">About</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/members">Members</Link>
       </div>
     );
   }
