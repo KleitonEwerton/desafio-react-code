@@ -1,20 +1,30 @@
 .nav-bar {
-  background-image: linear-gradient(to right, #00331a, #000f07);
+  background-image: linear-gradient(to right,#00190d, #000f07);
   color: white;
-  height: 3em;
+  height: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: .5px solid #fff;
+
 }
 
 a {
   text-decoration: none;
   color: white;
   text-transform: uppercase;
-  margin: 10px;
+  margin: 20px;
+  font-size: 18px;
 }
 
 a:hover {
   transform: scale(1.4);
   border-bottom: 1px solid #fff;
+}
+
+@media only screen and (max-width: 600px) {
+  a{
+    margin:15px;
+    font-size: 14px;
+  }
 }

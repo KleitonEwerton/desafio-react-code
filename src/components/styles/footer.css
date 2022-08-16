@@ -1,7 +1,9 @@
 .footer {
-  background-image: linear-gradient(to right, #00331a, #000f07);
+  background-image: linear-gradient(to right,#00190d, #000f07);
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  height:120px;
+  border-top: 0.5px solid #fff;
 }

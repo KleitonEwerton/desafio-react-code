@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 
 //------------------------- CSS -------------------------//
 
@@ -9,16 +9,41 @@ import Card from "./Card";
 //-------------------------------------------------------//
 
 class Members extends Component {
+
+  constructor(props){
+    super(props);
+    fetch("http://localhost:5000/members", {
+      method: "GET",
+      header: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((resp) => resp.json())
+      .then((data) => console.log(data)).catch((err)=>console.log(err));
+
+  }
+
   render() {
+
+   
     return (
-      <div className="App-header" >
-        <div style={{ display: "flex",  flexFlow: 'row wrap', width: "70%",justifyContent: 'center', alignContent:'spaceBetween'}}>
-          <Card name="Maria1" />
-          <Card name="Maria2" />
-          <Card name="Maria3" />
-          <Card name="Maria4" />
-          <Card name="Maria5" />
-          <Card name="Maria6" />
+      <div className="App-header">
+        <div
+          style={{
+            display: "flex",
+            flexFlow: "row wrap",
+            width: "70%",
+            justifyContent: "center",
+            alignContent: "spaceBetween",
+          }}
+        >
+          <Card name="Mariana❤️1" email="exampla@gmail.com" departments="VPGG" post="assessor" birthday="10/02/2023"/>
+          <Card name="Mariana❤️2"  email="exampla@gmail.com" departments="VPGG" post="assessor" birthday="10/02/2023" />
+          <Card name="Mariana❤️3" email="exampla@gmail.com" departments="VPGG" post="assessor" birthday="10/02/2023"/>
+          <Card name="Mariana❤️4" email="exampla@gmail.com" departments="VPGG" post="assessor" birthday="10/02/2023"/>
+          <Card name="Mariana❤️5" email="exampla@gmail.com" departments="VPGG" post="assessor" birthday="10/02/2023"/>
+          <Card name="Mariana❤️6" email="exampla@gmail.com" departments="VPGG" post="assessor" birthday="10/02/2023"/>
+          
         </div>
       </div>
     );

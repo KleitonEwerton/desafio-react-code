@@ -1,22 +1,12 @@
 import React, { Component } from "react";
-
+import "./styles/card.css";
 class Card extends Component {
   render() {
     return (
-      <div
-        style={{
-          height: "400px",
-          width: "300px",
-          background: "#fff",
-          color: "#000",
-          borderRadius: "10px",
-          margin: "30px",
-        }}
-      >
-        {" "}
-        {this.props.name}{" "}
-      </div>
-    );
+    <div className="card" style={{whiteSpace: 'pre-wrap', overflowWrap: 'break-word'}}> <h3>  {this.props.name }</h3> <p>Olá</p> </div>
+      
+      
+      );
   }
 }
 
