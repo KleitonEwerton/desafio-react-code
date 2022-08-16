@@ -1,10 +1,10 @@
 import React, { Component, useState } from "react";
+import Card from "../components/Card";
 
 //------------------------- CSS -------------------------//
 
 import "../index.css";
 import "../styles.css";
-import Card from "./Card";
 
 //-------------------------------------------------------//
 

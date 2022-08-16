@@ -9,8 +9,6 @@
 
 .card:hover{
     transform:scale(1.1);
-}
-.card:hover h3{
     color:#323c37;
 }
 

@@ -4,7 +4,6 @@ import React, { Component } from "react";
 
 import "../index.css";
 import "../styles.css";
-import Card from "./Card";
 
 //-------------------------------------------------------//
 
