@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component, useEffect, useState } from "react";
 import Card from "../components/Card";
 
 //------------------------- CSS -------------------------//
@@ -7,25 +7,27 @@ import "../index.css";
 import "../styles.css";
 
 //-------------------------------------------------------//
+//http://localhost:5000/members
+function Members (){
 
-class Members extends Component {
+  
+  const [members, setMembers] = useState([]);
 
-  constructor(props){
-    super(props);
-    fetch("http://localhost:5000/members", {
-      method: "GET",
-      header: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((resp) => resp.json())
-      .then((data) => console.log(data)).catch((err)=>console.log(err));
+  const getMembers = async (url)=>{
 
-  }
+    const res = await fetch(url);
+    const data = await res.json();
 
-  render() {
+    setMembers(data);
+  };
 
-   
+  useEffect(()=>{
+
+    const urlMembers = "http://localhost:5000/members";
+    getMembers(urlMembers);
+    
+  }, []);
+  
     return (
       <div className="App-header">
         <div
@@ -37,17 +39,15 @@ class Members extends Component {
             alignContent: "spaceBetween",
           }}
         >
-          <Card name="Mariana❤️1" email="exampla@gmail.com" departments="VPGG" post="assessor" birthday="10/02/2023"/>
-          <Card name="Mariana❤️2"  email="exampla@gmail.com" departments="VPGG" post="assessor" birthday="10/02/2023" />
-          <Card name="Mariana❤️3" email="exampla@gmail.com" departments="VPGG" post="assessor" birthday="10/02/2023"/>
-          <Card name="Mariana❤️4" email="exampla@gmail.com" departments="VPGG" post="assessor" birthday="10/02/2023"/>
-          <Card name="Mariana❤️5" email="exampla@gmail.com" departments="VPGG" post="assessor" birthday="10/02/2023"/>
-          <Card name="Mariana❤️6" email="exampla@gmail.com" departments="VPGG" post="assessor" birthday="10/02/2023"/>
-          
+          {members.map((member)=>
+
+             <Card name={member.name} email={member.email} departments={member.cargo} post={member.departamentos} birthday={member.aniversario}/>
+          )}
+         
         </div>
       </div>
     );
-  }
+  
 }
 
 export default Members;
