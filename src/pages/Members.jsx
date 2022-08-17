@@ -8,46 +8,46 @@ import "../styles.css";
 
 //-------------------------------------------------------//
 //http://localhost:5000/members
-function Members (){
-
-  
+function Members() {
   const [members, setMembers] = useState([]);
 
-  const getMembers = async (url)=>{
-
+  const getMembers = async (url) => {
     const res = await fetch(url);
     const data = await res.json();
 
     setMembers(data);
   };
 
-  useEffect(()=>{
-
+  useEffect(() => {
     const urlMembers = "http://localhost:5000/members";
     getMembers(urlMembers);
-    
   }, []);
-  
-    return (
-      <div className="App-header">
-        <div
-          style={{
-            display: "flex",
-            flexFlow: "row wrap",
-            width: "70%",
-            justifyContent: "center",
-            alignContent: "spaceBetween",
-          }}
-        >
-          {members.map((member)=>
 
-             <Card name={member.name} email={member.email} departments={member.cargo} post={member.departamentos} birthday={member.aniversario}/>
-          )}
-         
-        </div>
+  return (
+    <div className="App-header">
+      <div
+        style={{
+          display: "flex",
+          flexFlow: "row wrap",
+          width: "70%",
+          justifyContent: "center",
+          alignContent: "spaceBetween",
+        }}
+      >
+        {
+          members.map((member,index) => (
+            <Card key={index}
+              name={member.name}
+              email={member.email}
+              post={member.cargo}
+              departments={member.departamentos}
+              birthday={member.aniversario}
+            />
+          ))
+          }
       </div>
-    );
-  
+    </div>
+  );
 }
 
 export default Members;

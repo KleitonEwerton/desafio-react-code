@@ -1,19 +1,25 @@
 import React, { Component } from "react";
 import "./styles/card.css";
 class Card extends Component {
+
+ 
+
   render() {
-    const departments = "d";
+
+    //Tramento visual dos multiplos de partadepartamentos
+    this.departments = this.props.departments.length > 1? this.props.departments.map((department) => department + ", ") : this.props.departments;
+    
 
     return (
       <div
         className="card"
-        style={{ whiteSpace: "pre-wrap", overflowWrap: "break-word" }}
       >
         {" "}
-        <h3> {this.props.name}</h3>
-        <h4>{this.props.email}</h4> <h5>{this.props.post}</h5>
-        <p>{this.props.departments}</p>
-        <p style={{ bottom: "0px" }}>{this.props.birthday}</p>
+        <h2>{this.props.name}</h2>
+        <h3>{this.props.email}</h3> 
+        <h4>{this.props.post}</h4>
+        <h5>{this.departments}</h5>
+        <h6>{this.props.birthday}</h6>
       </div>
     );
   }
