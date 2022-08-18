@@ -1,4 +1,3 @@
-
 //------------------------- CSS -------------------------//
 
 import { Outlet } from "react-router-dom";
@@ -11,9 +10,12 @@ import "./styles.css";
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <Outlet />
-      <Footer />
+      <div className="App-main"></div>
+      <div>
+        <NavBar />
+        <Outlet />
+        <Footer />
+      </div>
     </div>
   );
 }

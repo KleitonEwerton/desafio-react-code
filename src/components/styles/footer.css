@@ -1,9 +1,10 @@
 .footer {
-  background-image: linear-gradient(to right,#00190d, #000f07);
-  color: white;
+  color:#D1C1E0;
   display: flex;
   justify-content: center;
   align-items: center;
   height:120px;
-  border-top: 0.5px solid #fff;
+  border-top: 0.5px solid #D1C1E0;
+  position: relative;
+  z-index: 2;
 }

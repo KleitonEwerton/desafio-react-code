@@ -2,17 +2,20 @@
   height: 400px;
   width: 300px;
   background: #000c06;
-  color: #fff;
+  color: #D1C1E0;
   border-radius: 30px;
   margin: 30px;
   white-space: pre-wrap;
   overflow-wrap: break-word;
   display: block;
+  text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 .card:hover {
   transform: scale(1.1);
-  color: #323c37;
+  color: #5D2690;
 }
 
 h2 {
