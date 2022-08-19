@@ -18,8 +18,8 @@ class NavBar extends Component {
         <div>
           <Link to="/" className="links-nav-bar">Home</Link>
           <Link to="/about" className="links-nav-bar">About</Link>
-          <Link to="/members" className="links-nav-bar">Members</Link>
           <Link to="/contact" className="links-nav-bar">Contact</Link>
+          <Link to="/login" className="links-nav-bar">LOGIN</Link>
         </div>
       </div>
     );

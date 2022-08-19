@@ -1,0 +1,38 @@
+.login-header {
+  width: 100wh;
+  height: 100vh; 
+  background: linear-gradient(to right, #000D07, #090e17);
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+
+.right-header, .left-header {
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.right-header{
+    border-left: 2px solid #fff;
+}
+
+.right-header{
+    background-image: url("/public/images/img2.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+}
+
+@media only screen and (max-width: 600px) {
+  .login-header {
+    display: block;
+  }
+
+  .right-header {
+    display: none;
+  }
+}
