@@ -6,6 +6,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   text-align: center;
+ 
 }
 
 .right-header, .left-header {
@@ -28,11 +29,10 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .login-header {
-    display: block;
-  }
+  
 
   .right-header {
     display: none;
   }
+
 }
