@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  height:120px;
+  min-height: 14.8vh;
   border-top: 0.5px solid #D1C1E0;
   position: relative;
   z-index: 2;

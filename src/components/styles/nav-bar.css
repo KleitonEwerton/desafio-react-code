@@ -1,6 +1,6 @@
 .nav-bar {
   color: #d1c1e0;
-  height: 120px;
+  min-height: 15vh;
   display: flex;
   justify-content: end;
   align-items: center;

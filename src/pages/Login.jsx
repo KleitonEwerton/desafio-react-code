@@ -11,32 +11,32 @@ function Login() {
   return (
     <div className="login-header">
       <div className="left-header">
-          <a className="links" id="paracadastro"></a>
-          <a className="links" id="paralogin"></a>
+          
 
           <div className="content">
             <div id="login">
-              <form method="post" action="">
+              {/* Method post not working */}
+              <form method="" action="/login">
                 <h1>Login</h1>
                 <p>
-                  <label htmlFor="nome_login">Seu nome</label>
+                  <label htmlFor="emailLogin">E-MAIL</label>
                   <input
-                    id="nome_login"
-                    name="nome_login"
+                    id="emailLogin"
+                    name="emailLogin"
                     required="required"
-                    type="text"
-                    placeholder="ex. contato@htmlecsspro.com"
+                    type="email"
+                    placeholder="ex. name.lastaname@fhjuridica.com.br"
                   />
                 </p>
 
                 <p>
-                  <label htmlFor="email_login">Seu e-mail</label>
+                  <label htmlFor="passwordLogin">PASSWORD</label>
                   <input
-                    id="email_login"
-                    name="email_login"
+                    id="passwordLogin"
+                    name="passwordLogin"
                     required="required"
                     type="password"
-                    placeholder="ex. senha"
+                    placeholder="ex. 12345678"
                   />
                 </p>
 
@@ -47,67 +47,19 @@ function Login() {
                     id="manterlogado"
                     value=""
                   />
-                  <label htmlFor="manterlogado">Manter-me logado</label>
+                  <label htmlFor="rememberMe"> Remember me</label>
                 </p>
 
                 <p>
-                  <input type="submit" value="Logar" />
+                  <input type="submit" value="Login" />
+                  <span className="forgotPassword">Forgot <Link to="#">password?</Link></span>
                 </p>
 
-                <p className="link">
-                  Ainda não tem conta?
-                  <a href="#paracadastro">Cadastre-se</a>
-                </p>
+                
               </form>
             </div>
 
-            <div id="cadastro">
-              <form method="post" action="">
-                <h1>Cadastro</h1>
-
-                <p>
-                  <label htmlFor="nome_cad">Seu nome</label>
-                  <input
-                    id="nome_cad"
-                    name="nome_cad"
-                    required="required"
-                    type="text"
-                    placeholder="nome"
-                  />
-                </p>
-
-                <p>
-                  <label htmlFor="email_cad">Seu e-mail</label>
-                  <input
-                    id="email_cad"
-                    name="email_cad"
-                    required="required"
-                    type="email"
-                    placeholder="contato@htmlecsspro.com"
-                  />
-                </p>
-
-                <p>
-                  <label htmlFor="senha_cad">Sua senha</label>
-                  <input
-                    id="senha_cad"
-                    name="senha_cad"
-                    required="required"
-                    type="password"
-                    placeholder="ex. 1234"
-                  />
-                </p>
-
-                <p>
-                  <input type="submit" value="Cadastrar" />
-                </p>
-
-                <p className="link">
-                  Já tem conta?
-                  <a href="#paralogin"> Ir para Login </a>
-                </p>
-              </form>
-            </div>
+            
           </div>
       </div>
       <div className="right-header"></div>

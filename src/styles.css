@@ -9,7 +9,8 @@
 }
 
 .App-header {
-  min-height: 80vh;
+  min-height: 70vh;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,7 +23,7 @@
   background-repeat: no-repeat;
   opacity: 0.1;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   z-index: 1;
   position: fixed;
 }

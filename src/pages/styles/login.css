@@ -6,6 +6,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .right-header,
@@ -71,7 +72,7 @@ input:not([type="checkbox"]) {
 
 h1 {
   font-size: 48px;
-  color: #066a75;
+  color: #d9d9d9;
   padding: 2px 0 10px 0;
   font-weight: bold;
   text-align: center;
@@ -91,7 +92,6 @@ label {
   position: relative;
 }
 
-/* placeholder */
 ::-webkit-input-placeholder {
   color: #bebcbc;
   font-style: italic;
@@ -103,7 +103,6 @@ textarea:-moz-placeholder {
   font-style: italic;
 }
 
-/*estilo do botão submit */
 input[type="submit"] {
   width: 100% !important;
   cursor: pointer;
@@ -111,7 +110,6 @@ input[type="submit"] {
   padding: 8px 5px;
   color: #fff;
   font-size: 20px;
-  border: 1px solid #fff;
   margin-bottom: 10px;
   text-shadow: 0 1px 1px #333;
   border-radius: 5px;
@@ -138,60 +136,47 @@ input[type="submit"]:hover {
   border: 1px solid #4ab3c6;
 }
 
-#cadastro,
 #login {
   position: absolute;
   top: 0px;
   width: 88%;
   padding: 18px 6% 60px 6%;
   margin: 0 0 35px 0;
-  border: 1px solid rgba(147, 184, 189, 0.8);
   border-radius: 5px;
-  animation-duration: 0.5s;
-  animation-timing-function: ease;
-  animation-fill-mode: both;
 }
 
-.content #cadastro {
-  display: none;
-}
 .content #login {
   display: block;
 }
 
-#paracadastro:target ~ .content #cadastro,
-#paralogin:target ~ .content #login {
-  z-index: 2;
-  -webkit-animation-name: fadeInLeft;
-  animation-name: fadeInLeft;
-  animation-delay: 0.1s;
+#login p{
+  margin: 30px 0;
 }
-
-#paracadastro:target ~ .content #cadastro {
-  display: block;
+.forgotPassword{
+  text-transform: capitalize;
+  font-size:14px;
+  text-decoration: none;
+  color:#d9d9d9;
 }
-#paracadastro:target ~ .content #login {
-  display: none;
-}
-
-#registro:target ~ .content #login,
-#paralogin:target ~ .content #cadastro {
-  animation-name: fadeOutLeft;
-}
-
-@keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.forgotPassword a{
+  color:white;
 }
 
 @media only screen and (max-width: 600px) {
+  .login-header {
+    display: flex;
+  }
   .right-header {
     display: none;
+  }
+  .left-header {
+    width: 100%;
+  }
+  .content {
+    max-width: 500px;
+    width: 100%;
+  }
+  #login p{
+    margin: 20px 0;
   }
 }
