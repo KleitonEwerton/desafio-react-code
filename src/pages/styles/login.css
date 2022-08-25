@@ -7,6 +7,7 @@
   grid-template-columns: 1fr 1fr;
   text-align: center;
   text-transform: uppercase;
+  font-weight: 400;
 }
 
 .right-header,

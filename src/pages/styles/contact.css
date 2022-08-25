@@ -1,6 +1,4 @@
-
-
-.screen-contact{
+.screen-contact {
   position: relative;
   z-index: 4;
   display: flex;
@@ -14,10 +12,19 @@
   letter-spacing: 1.4px;
 }
 
-
 .screen-body {
   display: flex;
   width: 100%;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .screen-body-item {
@@ -101,9 +108,6 @@
 .form-button:hover {
   color: #b9134f;
 }
-
-
-
 
 @media screen and (max-width: 520px) {
   .screen-body {

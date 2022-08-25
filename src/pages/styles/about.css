@@ -1,18 +1,27 @@
-.about{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: justify;
-    overflow-Wrap: break-word;
-    white-space: pre-wrap;
+.about {
+  display: grid;
+  position: relative;
+  z-index: 4;
+  grid-template-columns: 1fr 1fr;
+  text-align: justify;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
 }
-.text-about{
-    margin:20px;
-    color:#fff;
+.text-about {
+  margin: 50px 20px;
+  color: #fff;
+  font-size: 30px;
+  opacity: 0.8;
+}
+
+.text-about img {
+  width: 100%;
+  max-height: 600px;
+  border-radius: 20px;
 }
 
 @media only screen and (max-width: 600px) {
-    .about{
-        grid-template-columns: 1fr;
-    }
+  .about {
+    grid-template-columns: 1fr;
   }
-  
+}

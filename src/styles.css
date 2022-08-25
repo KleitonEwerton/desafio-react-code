@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap');
+
 *, *:before, *:after  {
   margin: 0;
   padding: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  letter-spacing:2px;
 }
 .App {
   text-align: left;
@@ -10,12 +15,12 @@
 
 .App-header {
   min-height: 70vh;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  
 }
 
 .App-main {

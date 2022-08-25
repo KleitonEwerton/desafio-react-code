@@ -32,13 +32,13 @@ class Contact extends Component {
                   />
                 </div>
                 <div className="form-group">
-                  <input className="form-control" placeholder="EMAIL" />
+                  <input className="form-control" placeholder="EMAIL" type="email" />
                 </div>
                 <div className="form-group">
-                  <input className="form-control" placeholder="CONTACT NO" />
+                  <input className="form-control" placeholder="CONTACT NUMBER" type='number'/>
                 </div>
                 <div className="form-group message">
-                  <input className="form-control" placeholder="MESSAGE" />
+                  <input className="form-control" placeholder="MESSAGE"type="text" />
                 </div>
                 <div className="form-group buttons">
                   <button className="form-button"><Link to="/home">CANCEL</Link></button>
