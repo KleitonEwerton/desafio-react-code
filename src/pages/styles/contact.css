@@ -41,7 +41,7 @@ input::-webkit-inner-spin-button {
   display: flex;
   flex-direction: column;
   position: relative;
-  color: #ea1d6f;
+  color: #a283c0;
   font-size: 26px;
 }
 
@@ -53,7 +53,7 @@ input::-webkit-inner-spin-button {
   bottom: -10px;
   width: 25px;
   height: 4px;
-  background: #ea1d6f;
+  background: #a283c0;
 }
 
 .contact {
@@ -99,14 +99,16 @@ input::-webkit-inner-spin-button {
 .form-button {
   background: none;
   border: none;
-  color: #ea1d6f;
-  font-size: 14px;
+  color: #816899;
+  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
   outline: none;
+  margin: 0 10px;
 }
 
 .form-button:hover {
-  color: #b9134f;
+  color: #67537a;
 }
 
 @media screen and (max-width: 520px) {
