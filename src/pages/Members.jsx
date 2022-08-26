@@ -37,6 +37,7 @@ function Members() {
         {
           members.map((member,index) => (
             <Card key={index}
+              id={member.id}
               name={member.name}
               email={member.email}
               post={member.cargo}
