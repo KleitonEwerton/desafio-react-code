@@ -1,0 +1,17 @@
+.dashBoard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.membersTable {
+    border: 2px solid #000;
+  }
+    
+  th {
+    border-bottom: 1px solid black;
+  }
+    
+  td {
+    text-align: center;
+  }
