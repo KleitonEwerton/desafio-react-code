@@ -13,6 +13,7 @@ import Home from "./pages/Home";
 
 import "./index.css";
 import Members from "./pages/Members";
+import DashBoardAdm from "./pages/adm/DashBoardAdm";
 
 //-------------------------------------------------------//
 
@@ -28,7 +29,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/members" element={<Members />} />
         </Route>
           <Route path="/login" element={<Login />} />
-
+          <Route path='/adm' element={<DashBoardAdm />}>
+            
+          </Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

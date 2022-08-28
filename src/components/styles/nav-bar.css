@@ -48,7 +48,7 @@ li {
 }
 
 /* CHECKBOX HACK */
-input[type="checkbox"] {
+.nav-links input[type="checkbox"] {
   display: none;
 }
 /*HAMBURGER MENU*/
@@ -57,6 +57,7 @@ input[type="checkbox"] {
   font-size: 24px;
   user-select: none;
   margin-right: 10px;
+  color:#d1c1e0;
 }
 
 
@@ -87,7 +88,7 @@ input[type="checkbox"] {
     
   }
 
-  input[type="checkbox"]:checked ~ .menu{
+  .nav-links input[type="checkbox"]:checked ~ .menu{
 
     display: block;
     border-bottom: 0.5px solid #d1c1e0;

@@ -17,6 +17,7 @@
   width: 100%;
 }
 
+/*START REMOVE TYPE NUMBER ICON  */
 input[type="number"] {
   -moz-appearance: textfield;
 }
@@ -26,6 +27,7 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+/*END REMOVE TYPE NUMBER ICON  */
 
 .screen-body-item {
   flex: 1;
