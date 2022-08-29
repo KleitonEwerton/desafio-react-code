@@ -11,22 +11,6 @@ class Card extends Component {
         ? this.props.departments.map((department) => department + ", ")
         : this.props.departments;
 
-    
-    let host = "http://localhost:5000/members/";
-
-
-   const deleteMember = async (id) => {
-    await fetch(`${host}${id}`,{ method: 'DELETE' })
-    .then((response) =>response.json())
-    .then((responseJson)=>{
-      console.log(responseJson);
-      window.location.reload(); 
-    })
-    .catch((error) =>{
-      console.log(`Erro no ${error}`);
-    })
-
-   }
 
     return (
       <div className="card">
@@ -37,7 +21,6 @@ class Card extends Component {
         <h5>{this.departments}</h5>
         <h6>{this.props.birthday}</h6>
         
-        <button onClick={()=>deleteMember(this.props.id)}>deletar</button>
         
       </div>
     );
