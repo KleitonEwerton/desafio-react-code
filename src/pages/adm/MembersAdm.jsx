@@ -4,18 +4,18 @@ import {
   AiOutlineUserAdd,
   AiFillEdit,
   AiFillDelete,
-  AiFillEye,AiOutlinePlusSquare
+  AiFillEye,
+  AiOutlinePlusSquare,
 } from "react-icons/ai";
 
 import "./styles/MembersAdm.css";
 import "../../styles.css";
 import deleteMember from "./controllers/MembersAdmController";
 
-Modal.setAppElement("#root");
+// Modal.setAppElement("#root");
+const host = "http://localhost:5000/members/";
 
 function MembersAdm() {
-  let host = "http://localhost:5000/members/"; //API localhost
-
   const [members, setMembers] = useState([]);
 
   const getMembers = async (url) => {
@@ -29,12 +29,35 @@ function MembersAdm() {
     getMembers(host);
   }, []);
 
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
+  const custonStyle = {
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+    },
+  };
 
   return (
     <div>
       <div className="dashBoard">
-       <div className="members-bar"><button><AiOutlinePlusSquare></AiOutlinePlusSquare></button></div>
+        <div className="members-bar">
+          <button onClick={handleOpen}>
+            <AiOutlinePlusSquare></AiOutlinePlusSquare>
+          </button>
+
+          <Modal
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+          >
+            
+          </Modal>
+        </div>
         <table className="members-table">
           <thead>
             <tr>
@@ -45,7 +68,12 @@ function MembersAdm() {
           </thead>
           <tbody>
             {members.map((member, index) => (
-              <tr key={member.id} className={ index%2==0?'row-table-members2':'row-table-members1'}>
+              <tr
+                key={member.id}
+                className={
+                  index % 2 == 0 ? "row-table-members2" : "row-table-members1"
+                }
+              >
                 <td className="line-table-members">{member.name}</td>
                 <td className="line-table-members"> {member.email}</td>
                 <td className="line-table-members">
