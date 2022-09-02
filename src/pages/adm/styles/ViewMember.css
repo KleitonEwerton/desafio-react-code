@@ -1,0 +1,30 @@
+.view-member-img{
+    width:100px;
+}
+.form-view-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 500px;
+    max-width: 90%;
+    
+  }
+  .form-view-member input{
+      width: 100%;
+      border-radius:5px;
+      height: 30px;
+      color:black;
+  }
+  .form-view-member a{
+      width: 100%;
+      border-radius:5px;
+      margin:20px 0;
+      color:black;
+  }
+
+  .form-view-member a:hover{
+    color:darkslategray;
+}
+  

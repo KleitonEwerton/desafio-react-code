@@ -7,7 +7,7 @@ import "../index.css";
 import "../styles.css";
 
 //-------------------------------------------------------//
-//http://localhost:5000/members
+
 function Members() {
   const [members, setMembers] = useState([]);
 

@@ -1,28 +1,51 @@
+import { useEffect } from "react";
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 
 //------------------------- CSS -------------------------//
 
 import "./styles/AddMember.css";
 import "./styles/MembersAdm.css";
+import "./styles/EditMember.css";
 
 //-------------------------------------------------------//
 
-export default function AddMember() {
+const EditMember = (props) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [aniversario, setAniversario] = useState("");
-  const [departamento, setDepartamento] = useState([]);
+  const [departamento, setDepartamento] = useState("");
   const [cargo, setCargo] = useState("");
-  const host = "http://localhost:5000/members/";
+  const { id } = useParams();
+  const hostPages = "http://localhost:5000/members/";
+  const host = hostPages + id;
+
+  const [member, setMember] = useState({});
+
+  const getMember = async (url) => {
+    const res = await fetch(url);
+    const data = await res.json();
+
+    setMember(data);
+    setName(data.name);
+    setEmail(data.email);
+    setAniversario(data.aniversario);
+    setDepartamento(data.departamentos.map((department) => department + ","));
+    setCargo(data.cargo);
+  };
+
+  useEffect(() => {
+    getMember(host);
+  }, []);
 
   const submit = (e) => {
     e.preventDefault();
-    const departamentos = departamento.split(",");
+    let departamentos = departamento.toString().split(",");
+    departamentos = departamentos.filter((i) => i);
     const member = { name, email, aniversario, departamentos, cargo };
-    console.log(member);
 
     fetch(host, {
-      method: "POST",
+      method: "PUT",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(member),
     }).then(() => {
@@ -32,8 +55,8 @@ export default function AddMember() {
 
   return (
     <div className="member-page">
-      <form className="form-add-member" onSubmit={submit}>
-        <img className="add-member-img" src="/images/user.png"></img>
+      <form className="form-edit-member" onSubmit={submit}>
+        <img className="edit-member-img" src="/images/user.png"></img>
 
         <label>Name</label>
         <input
@@ -46,6 +69,7 @@ export default function AddMember() {
 
         <label>e-mail</label>
         <input
+          required
           placeholder="ex: name.lastname@fhjuridica.com.br"
           type="email"
           value={email}
@@ -64,7 +88,7 @@ export default function AddMember() {
         <label>department</label>
         <input
           required
-          placeholder="ex: VPGG, Comercial"
+          placeholder="ex: VPGG Comercial"
           type="text"
           value={departamento}
           onChange={(e) => setDepartamento(e.target.value)}
@@ -79,8 +103,9 @@ export default function AddMember() {
           onChange={(e) => setCargo(e.target.value)}
         />
 
-        <input type="submit" name="Add" value="ADICIONAR" />
+        <input type="submit" name="Add" value="SAVE" />
       </form>
     </div>
   );
-}
+};
+export default EditMember;

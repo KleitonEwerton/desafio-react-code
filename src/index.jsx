@@ -15,6 +15,11 @@ import "./index.css";
 import Members from "./pages/Members";
 import MembersAdm from "./pages/adm/MembersAdm";
 import AddMember from "./pages/adm/AddMember";
+import EditMember from "./pages/adm/EditMember";
+import ViewMember from "./pages/adm/ViewMember";
+import DashBoardAdm from "./pages/adm/DashBoardAdm";
+
+
 
 //-------------------------------------------------------//
 
@@ -30,11 +35,15 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/members" element={<Members />} />
         </Route>
           <Route path="/login" element={<Login />} />
-          {/* <Route path='/adm' element={<DashBoardAdm />}> */}
+          <Route path='/adm' element={<DashBoardAdm />}/>
+          <Route path='/adm/members' element={<MembersAdm />} />
           <Route path='/adm/members/addmember' element={<AddMember/>} />
-          <Route path='/adm/members' element={<MembersAdm />}>
+          <Route path='/adm/members/editmember/:id' element={<EditMember/>} />
+          <Route path='/adm/members/viewmember/:id' element={<ViewMember/>} />
+
+
             
-          </Route>
+         
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
