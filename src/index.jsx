@@ -14,6 +14,7 @@ import Home from "./pages/Home";
 import "./index.css";
 import Members from "./pages/Members";
 import MembersAdm from "./pages/adm/MembersAdm";
+import AddMember from "./pages/adm/AddMember";
 
 //-------------------------------------------------------//
 
@@ -30,6 +31,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         </Route>
           <Route path="/login" element={<Login />} />
           {/* <Route path='/adm' element={<DashBoardAdm />}> */}
+          <Route path='/adm/members/addmember' element={<AddMember/>} />
           <Route path='/adm/members' element={<MembersAdm />}>
             
           </Route>

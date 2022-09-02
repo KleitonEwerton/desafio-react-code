@@ -29,34 +29,17 @@ function MembersAdm() {
     getMembers(host);
   }, []);
 
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
-  const custonStyle = {
-    content: {
-      top: "50%",
-      left: "50%",
-      right: "auto",
-    },
-  };
+  
 
   return (
     <div>
       <div className="dashBoard">
         <div className="members-bar">
-          <button onClick={handleOpen}>
+          <a type='button'href="http://localhost:3000/adm/members/addmember">
             <AiOutlinePlusSquare></AiOutlinePlusSquare>
-          </button>
+          </a>
 
-          <Modal
-            open={open}
-            onClose={handleClose}
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description"
-          >
-            
-          </Modal>
+          
         </div>
         <table className="members-table">
           <thead>

@@ -14,7 +14,7 @@ function Login() {
         <div className="content">
           <div id="login">
             {/* Method post not working */}
-            <form method="" action="/adm">
+            <form method="" action="/adm/members">
               <h1>Login</h1>
               <p>
                 <label htmlFor="emailLogin">E-MAIL</label>
